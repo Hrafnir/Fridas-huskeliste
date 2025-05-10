@@ -1,0 +1,145 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4CAF50; /* Veterinær-grønn */
+    padding-bottom: 10px;
+}
+
+header h1 {
+    color: #4CAF50;
+}
+
+.mode-selection button,
+.add-item-form button,
+.reminders button,
+.danger-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.mode-selection button:hover,
+.add-item-form button:hover,
+.reminders button:hover,
+.danger-btn:hover {
+    background-color: #45a049;
+}
+
+.danger-btn {
+    background-color: #f44336; /* Rød for fare/nullstill */
+}
+.danger-btn:hover {
+    background-color: #da190b;
+}
+
+
+.add-item-form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.add-item-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#checklist {
+    list-style: none;
+    padding: 0;
+}
+
+#checklist li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#checklist li:last-child {
+    border-bottom: none;
+}
+
+#checklist li.checked label {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+#checklist input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Gjør checkbox litt større */
+}
+
+#checklist .delete-item {
+    background: none;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+}
+#checklist .delete-item:hover {
+    color: #cc0000;
+}
+
+
+.reminders input[type="time"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Enkel responsivitet */
+@media (max-width: 600px) {
+    .mode-selection button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .add-item-form {
+        flex-direction: column;
+    }
+    .add-item-form input[type="text"] {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .add-item-form button {
+        width: 100%;
+    }
+}
