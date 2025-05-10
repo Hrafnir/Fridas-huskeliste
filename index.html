@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeskeVakten</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>VeskeVakten  veterinær</h1>
+            <p>Din hjelper for å huske alt!</p>
+        </header>
+
+        <section class="mode-selection">
+            <h2>Velg modus:</h2>
+            <button data-mode="fritid">Fritid</button>
+            <button data-mode="jobb">Jobb (Klinikk)</button>
+            <button data-mode="stallen">Stallen (Ambulatorisk)</button>
+            <button data-mode="langtur">Langtur</button>
+        </section>
+
+        <section class="current-list">
+            <h2 id="currentListName">Velg en modus for å se listen</h2>
+            <div class="add-item-form">
+                <input type="text" id="newItemText" placeholder="Legg til nytt element...">
+                <button id="addItemBtn">Legg til</button>
+            </div>
+            <ul id="checklist">
+                <!-- Listeelementer blir lagt til her av JavaScript -->
+            </ul>
+            <button id="resetListBtn" class="danger-btn" style="display:none;">Nullstill avhukinger</button>
+        </section>
+
+        <section class="reminders">
+            <h2>Påminnelser</h2>
+            <label for="departureTime">Når drar du ca? (HH:MM)</label>
+            <input type="time" id="departureTime">
+            <button id="setReminderBtn">Sett påminnelse</button>
+            <p id="reminderStatus"></p>
+            <p><em>(Påminnelser er enkle nettleservarsler. Sørg for å tillate varsler fra denne siden.)</em></p>
+        </section>
+
+        <footer>
+            <p>Laget med ❤️ for en travel veterinær!</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
